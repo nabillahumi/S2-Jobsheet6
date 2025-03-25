@@ -37,6 +37,23 @@ public class MahasiswaBerprestasi18 {
         return posisi;
     }
 
+    int findBinarySearch(double cari, int left, int righft) {
+        int mid;
+        if (righft >= left) {
+            mid = (left + righft) /2;
+            if (cari == listMhs[mid].ipk) {
+                return (mid);
+            }
+            else if (listMhs[mid].ipk > cari) {
+                return findBinarySearch(cari, left, mid-1);
+            }
+            else {
+                return findBinarySearch(cari, mid + 1, righft);
+            }
+        }
+        return -1;
+    }
+
     // Method tampilPosisi untuk menampilkan hasil pencarian
     void tampilPosisi(double x, int pos) {
         if (pos != -1) {
@@ -57,23 +74,5 @@ public class MahasiswaBerprestasi18 {
             System.out.println("Data mahasiswa dengan IPK " + x + " tidak ditemukan");
         }
     }
-
-    int findBinarySearch(double cari, int left, int righft) {
-        int mid;
-        if (righft >= left) {
-            mid = (left + righft) /2;
-            if (cari == listMhs[mid].ipk) {
-                return (mid);
-            }
-            else if (listMhs[mid].ipk > cari) {
-                return findBinarySearch(cari, left, mid-1);
-            }
-            else {
-                return findBinarySearch(cari, mid + 1, righft);
-            }
-        }
-        return -1;
-    }
-    
 }
 
