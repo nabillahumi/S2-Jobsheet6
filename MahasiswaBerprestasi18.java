@@ -37,6 +37,20 @@ public class MahasiswaBerprestasi18 {
         return posisi;
     }
 
+    // **Sorting Ascending (IPK dari kecil ke besar)**
+    void sortingAscending() {
+        for (int i = 0; i < idx - 1; i++) {
+            for (int j = 0; j < idx - 1 - i; j++) {
+                if (listMhs[j].ipk > listMhs[j + 1].ipk) {
+                    Mahasiswa18 temp = listMhs[j];
+                    listMhs[j] = listMhs[j + 1];
+                    listMhs[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("\nData mahasiswa telah diurutkan berdasarkan IPK secara ASCENDING.");
+    }
+
     int findBinarySearch(double cari, int left, int righft) {
         int mid;
         if (righft >= left) {

@@ -29,36 +29,29 @@ public class MahasiswaDemo18 {
             list.tambah(mhs); // Menambahkan objek mahasiswa ke dalam list
 
         }
+        
+        // Menampilkan Data Sebelum Sorting
+        System.out.println("\nData Mahasiswa Sebelum Sorting:");
         list.tampil();
 
-            //Melakukan pencarian data sequental
-            //System.out.println("-----------------------------------------");
-            //System.out.println("Pencarian data");
-            //System.out.println("-----------------------------------------");
-            //System.out.println("Masukkan ipk mahasiswa yang dicari : ");
-            //System.out.print("IPK : ");
-            //double cari = sc.nextDouble();
+        // Sorting Data Mahasiswa
+        list.sortingAscending();
+        list.tampil();
 
-            //System.out.println("Menggunakan sequental searching");
-            //double posisi = list.sequentialSearching(cari);
-            //int pss = (int)posisi;
-            //list.tampilPosisi(cari, pss);
-            //list.tampilDataSearch(cari, pss);
+        //Melakukan pencarian data Binary
+        System.out.println("-----------------------------------------");
+        System.out.println("Pencarian data");
+        System.out.println("-----------------------------------------");
+        System.out.println("Masukkan ipk mahasiswa yang dicari : ");
+        System.out.print("IPK : ");
+        double cari = sc.nextDouble();
 
-            //Melakukan pencarian data Binary
-            System.out.println("-----------------------------------------");
-            System.out.println("Pencarian data");
-            System.out.println("-----------------------------------------");
-            System.out.println("Masukkan ipk mahasiswa yang dicari : ");
-            System.out.print("IPK : ");
-            double cari = sc.nextDouble();
-
-            System.out.println("-----------------------------------");
-            System.out.println("Menggunakan binary searching");
-            double posisi2 = list.findBinarySearch(cari, 0, jumlahMahasiswa-1);
-            int pss2 = (int)posisi2;
-            list.tampilPosisi(cari, pss2);
-            list.tampilDataSearch(cari, pss2);
+        System.out.println("-----------------------------------");
+        System.out.println("Menggunakan binary searching");
+        double posisi2 = list.findBinarySearch(cari, 0, jumlahMahasiswa-1);
+        int pss2 = (int)posisi2;
+        list.tampilPosisi(cari, pss2);
+        list.tampilDataSearch(cari, pss2);
     }
 }
 
